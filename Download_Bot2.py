@@ -43,7 +43,7 @@ async def descarga(update: Update, context: ContextTypes.DEFAULT_TYPE):
         for part_name in part_files:
             await update.message.reply_document(document=open(part_name, 'rb'))
 
-        await update.message.reply_text(f"Archivo dividido en {len(part_files)} partes de 5 MB. Puedes unirlas con WinRAR o 7-Zip.")
+        await update.message.reply_text(f"Archivo dividido en {len(part_files)} partes de 20 MB. Puedes unirlas con WinRAR o 7-Zip.")
 
     except Exception as e:
         await update.message.reply_text(f"Error al descargar o dividir el archivo: {e}")
